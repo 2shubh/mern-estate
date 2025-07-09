@@ -27,3 +27,15 @@ mongoose.connect(process.env.MONGODB_URL,{
 app.listen(3000,()=>{
     console.log("Server is listening at port 3000..");
 });
+
+//middleware
+
+app.use((err,req,res,next)=>{
+    const statuscode=err.statuscode || 500;
+    const message=err.message || 'Internal server error'
+    res.status(statuscode).json({
+        success:false,
+        statuscode,
+        message
+    })
+})
