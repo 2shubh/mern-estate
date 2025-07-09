@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter,Route,Routes } from 'react-router-dom'
-import Sign_In from './pages/Sign_In'
+import {Sign_in} from './pages/Sign_In'
 import { Sign_up } from './pages/Sign_up'
 import Home from './pages/Home'
 import Profile from './pages/Profile'
@@ -13,7 +13,7 @@ const App = () => {
     <Header/>
     <Routes>
       <Route path='/' element={<Home/>}/>
-      <Route path='/signin' element={<Sign_In/>} />
+      <Route path='/signin' element={<Sign_in/>} />
       <Route path='/signup' element={<Sign_up/>} />
       <Route path='/profile' element={<Profile/>} />
       <Route path='/about' element={<About/>} />
